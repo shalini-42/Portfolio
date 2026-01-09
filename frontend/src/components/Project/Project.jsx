@@ -1,31 +1,31 @@
+import './Project.css'
 import { Link } from "react-router-dom";
-
+import { project_list } from '../Data/project';
 const Project = ({ project }) => {
-  if (!project) return null;
+  // if (!project) return null;
 
   return (
-      <section id="project">
-      <div className="card project_card text-dark">
-       {ima}
+    <div className="container">
+      <h2>Latest Projects</h2>
+      <div className="project-section">
+        {project_list.map((project) => (
+          <div key={project.id} className="card project_card">
+            <img src={project.img_src} alt={project.title} />
 
-        <div className="card-body">
-          <Link to={`/project/${project.id}`}>
-            <h5>{project.title}</h5>
-          </Link>
+            <div className="project-body text-dark">
+              <Link to={`/project/${project.id}`}>
+                <h5>{project.title}</h5>
+              </Link>
 
-          <p>{project.description}</p>
-          <small>{project.tech}</small>
-          <br />
-
-          {project.github && (
-            <a href={project.github} target="_blank" rel="noreferrer">
-              GitHub
-            </a>
-          )}
-        </div>
+            </div>
+          </div>
+        ))}
       </div>
-    </section>
-  )
-}
+    </div>
+  );
+};
 
 export default Project;
+
+   
+  

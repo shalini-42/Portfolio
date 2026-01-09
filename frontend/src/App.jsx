@@ -7,11 +7,12 @@ import Navbar from './components/NavBar/NavBar';
 
 import Footer from './components/Footer';
 
-import Card from './components/Card';
 import Contact from './components/Contact';
-
+import Project from './components/Project/Project';
 import SkillCard from './components/SkillCard/SkillCard';
-// import HomePage from "./pages/HomePage/HomePage";
+import Card from './components/Card';
+import HomePage from './pages/Home/HomePage';
+
 
 import { Outlet } from 'react-router-dom';
 
@@ -28,7 +29,6 @@ function App() {
       <Footer/>
     </footer>
      
-    
     </>
   );
 }
