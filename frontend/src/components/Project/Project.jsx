@@ -5,6 +5,7 @@ const Project = ({ project }) => {
   // if (!project) return null;
 
   return (
+    <div className="project-section">
     <div className="container">
       <h2>Latest Projects</h2>
       <div className="project-section">
@@ -21,6 +22,7 @@ const Project = ({ project }) => {
           </div>
         ))}
       </div>
+    </div>
     </div>
   );
 };

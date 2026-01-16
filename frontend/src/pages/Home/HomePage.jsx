@@ -3,7 +3,9 @@ import SkillCard from "../../components/SkillCard/SkillCard";
 import { skill_list } from "../../components/Data/skill";
 import { project_list } from "../../components/Data/project";
 import Project from "../../components/Project/Project";
-
+import Education from "../Education/Education";
+import { education_list } from "../../components/Data/education";
+import About from "../About/About";
 
 function HomePage() {
   

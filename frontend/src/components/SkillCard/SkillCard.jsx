@@ -3,36 +3,31 @@ import "./SkillCard.css";
 
 function SkillCard() {
   return (
-    <section id="skills" className="bg-dark py-2">
-      <div className="container ">
-        <h2 className="text-center mb-4 "style={{
-          color:"white"
-        }}>Technical Arsenal</h2>
+      <div className="skills-section">
+      <div className="container">
+        <h2 className="skills-title">Technical Skills</h2>
 
-        <div className="row">
-          {skill_list.map((skill) => (
+        <div className="row justify-content-center">
+          {skill_list.map((skill, index) => (
             <div
-              key={skill.name}
-              className="col-md-4 col-6 mb-4"
+              key={index}
+              className="col-lg-3 col-md-4 col-sm-6 mb-4"
             >
-              <div className="card skill-card h-100 shadow-sm">
+              <div className="skill-card text-center">
                 <img
                   src={skill.img}
-                  alt={skill.name}
-                  className="card-img-top skill-img"
+                  alt={skill.title}
+                  className="skill-icon"
                 />
-                <div className="card-body text-center">
-                  <h6 className="fw-bold">{skill.name}</h6>
-                </div>
+                <h5>{skill.title}</h5>
+                <p>{skill.desc}</p>
               </div>
             </div>
           ))}
         </div>
-
       </div>
-    </section>
+    </div>
   );
 }
 
 export default SkillCard;
-

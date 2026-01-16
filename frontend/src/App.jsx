@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
 
-import Navbar from './components/NavBar/NavBar';
+import Navbar from './components/Navbar/Navbar';
 
 import Footer from './components/Footer';
 
@@ -12,7 +12,7 @@ import Project from './components/Project/Project';
 import SkillCard from './components/SkillCard/SkillCard';
 import Card from './components/Card';
 import HomePage from './pages/Home/HomePage';
-
+import Education from './pages/Education/Education';
 
 import { Outlet } from 'react-router-dom';
 

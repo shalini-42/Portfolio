@@ -1,34 +1,40 @@
 import "./Contact.css";
 
-function Contact() {
+const Contact = () => {
   return (
-    <section id="contact" className="contact-section" style={{
-       height: "520px"
-    }}>
-      <h2 className="section-title">Contact Me</h2>
+    <div className="contact-container">
+      <h1 className="contact-title">
+        Get in touch. I’m happy to chat about <br /> potential projects.
+      </h1>
 
-      <div className="contact-card">
-        <div className="contact-item">
-          <span>📧</span>
-          <a href="shalinisharoon42@email.com">
-           shalinisharoon42@gmail.com
-          </a>
+      <form className="contact-form">
+        {/* Name */}
+        <div className="form-group">
+          <label>Name</label>
+          <div className="name-fields">
+            <input type="text" placeholder="First Name (required)" required />
+            <input type="text" placeholder="Last Name (required)" required />
+          </div>
         </div>
 
-        <div className="contact-item">
-          <span>📞</span>
-          <a href="tel:+917204541662">
-            +91 7204541662
-          </a>
+        {/* Email */}
+        <div className="form-group">
+          <label>Email (required)</label>
+          <input type="email" placeholder="Enter your email" required />
         </div>
 
-        <div className="contact-item">
-          <span>📍</span>
-          <p>   India</p>
+        {/* Message */}
+        <div className="form-group">
+          <label>Message (required)</label>
+          <textarea placeholder="Write your message..." required />
         </div>
-      </div>
-    </section>
+
+        <button type="submit" className="send-btn">
+          Send
+        </button>
+      </form>
+    </div>
   );
-}
+};
 
 export default Contact;
