@@ -2,7 +2,7 @@ export const project_list =[
     {
         id:1,
         title: "Portfolio Website",
-        img_src:`/project/profile.jpeg`,
+        img_src:`https://tse1.mm.bing.net/th/id/OIP.WyHNnNNg4sCNZ5LhoZ5DEAHaE8?pid=Api&P=0&h=180`,
         description:"A personal portfolio website created to showcase my skills, academic projects, education, and basic experience as a fresher. It highlights my learning journey, technical knowledge, and interest in web development. The website is designed to be responsive and user-friendly, helping recruiters understand my potential and willingness to learn.",
         features:[
           
@@ -19,7 +19,7 @@ export const project_list =[
       {
         id: 2,
         title: "Online Examination System",
-        img_src: `/project/online_ecam.png`,
+        img_src: `/project/onlineexam.png`,
         description:"An Online Examination System is a web-based application that allows students to take exams digitally through a secure login system. It enables administrators to create and manage exams, add questions, and control exam duration. The system automatically evaluates answers and generates instant results, reducing manual effort and errors. It also ensures fair examination by preventing multiple attempts and securely storing student data and exam records in the database.",
         features:[
       "User registration and secure login",

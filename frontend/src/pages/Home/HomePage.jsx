@@ -19,22 +19,7 @@ function HomePage() {
           <div className="col-md-4">
             <Card />
           </div>
-          {/* <div className="card-group my-3">
-           {skill_list.map((skills, index) =>(
-                <SkillCard skills={skills} key={skills.id}/>
-  ))
-}
-        </div> */}
-         {/* <div>
-      {project_list.map((item) => (
-  <Project key={item.id} project={item} />
-))}
-</div> */}
-{/* <div>
-      {project_list.map((project, index) => (
-  <Project project={project} key={project.id} />
-))}
-</div> */}
+          
         </div>
       </div>
     </>

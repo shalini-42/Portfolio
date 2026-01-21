@@ -1,22 +1,117 @@
-.resume-btn {
-    display: flex;
-  justify-content: center;
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Background polish ===== */
+body {
+  background-color: #000;
+  color: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== Headings ===== */
+.container-item {
+  letter-spacing: 1.5px;
+  position: relative;
+}
+
+.container-item::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #00f2fe, #a855f7);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+}
+
+/* ===== Description text ===== */
+h2 {
+  margin-top: 18px;
+  max-width: 600px;
+  line-height: 1;
+  color: #f7f8f8;
   align-items: center;
-  padding: 12px 28px;
-  margin-top: 50px;
-  margin-right: 250px;
-  font-size: 16px;
-  font-weight: 600;
-  color: hsl(0, 12%, 93%);
-  background-color:  #111111;
+}
+
+/* ===== Image Glow Enhancement ===== */
+.image {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  
+}
+
+.image:hover {
+  transform: scale(1.06);
+  box-shadow:
+    0 10px 20px #00f2fe,
+    0 60px 60px #4facfe,
+    0 30px 80px #a855f7;
+}
+
+/* ===== Resume Button (Neon style) ===== */
+.resume-btn {
+  margin-top: 40px;
+  margin-right: 100%;
+  padding: 12px 34px;
+  background: linear-gradient(135deg, #00f2fe, #a855f7);
+  color: #000;
   border: none;
   border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
 }
 
 .resume-btn:hover {
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 25px #00f2fe,
+    0 0 60px #a855f7;
+}
+
+/* ===== Subtle page animation ===== */
+.container {
+  animation: fadeUp 0.8s ease-in-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Responsive polish ===== */
+@media (max-width: 768px) {
+  .container-item {
+    margin-left: 0 !important;
+    text-align: center;
+  }
+
+  .container-item::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .image {
+    width: 260px !important;
+    height: 260px !important;
+  }
+
+  .resume-btn {
+    margin-bottom: 20px;
+  }
 }
