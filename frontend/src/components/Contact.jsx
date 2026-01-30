@@ -2,37 +2,61 @@ import "./Contact.css";
 
 const Contact = () => {
   return (
-    <div className="contact-container">
-      <h1 className="contact-title">
-        Get in touch. I’m happy to chat about <br /> potential projects.
-      </h1>
+    <div className="contact-section">
+      <h1>Contact</h1>
+      <div className="contact-container">
 
-      <form className="contact-form">
-        {/* Name */}
-        <div className="form-group">
-          <label>Name</label>
-          <div className="name-fields">
-            <input type="text" placeholder="First Name (required)" required />
-            <input type="text" placeholder="Last Name (required)" required />
+        {/* LEFT SIDE */}
+        <div className="contact-left">
+          <div className="info-box">
+            <span className="icon">📍</span>
+            <div>
+              <h4>Address</h4>
+              <p>Bengalore</p>
+            </div>
           </div>
+
+          <div className="info-box">
+            <span className="icon">📞</span>
+            <div>
+              <h4>Call Us</h4>
+              <p>+91 7204541662</p>
+            </div>
+          </div>
+
+          <div className="info-box">
+            <span className="icon">✉️</span>
+            <div>
+              <h4>Email Us</h4>
+              <p>shalinisharoon42@gmail.com</p>
+            </div>
+          </div>
+
+          {/* MAP */}
+          <iframe
+            className="map"
+            src="https://www.google.com/maps?q=Downtown%20Conference%20Center&output=embed"
+            loading="lazy"
+            title="map"
+          ></iframe>
         </div>
 
-        {/* Email */}
-        <div className="form-group">
-          <label>Email (required)</label>
-          <input type="email" placeholder="Enter your email" required />
+        {/* RIGHT SIDE */}
+        <div className="contact-right">
+          <form className="contact-form">
+            <div className="row">
+              <input type="text" placeholder="Your Name" />
+              <input type="email" placeholder="Your Email" />
+            </div>
+
+            <input type="text" placeholder="Subject" />
+            <textarea placeholder="Message"></textarea>
+
+            <button type="submit">Send Message</button>
+          </form>
         </div>
 
-        {/* Message */}
-        <div className="form-group">
-          <label>Message (required)</label>
-          <textarea placeholder="Write your message..." required />
-        </div>
-
-        <button type="submit" className="send-btn">
-          Send
-        </button>
-      </form>
+      </div>
     </div>
   );
 };
